@@ -1,0 +1,26 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onsubmit(form)">
+        <input type="hidden" name="paymentDetailId" value="service.formData.paymentDetailId">
+        <div class="form-froup">
+            <label> CARD OWNER NAME</label>
+            <input name="cardOwnerName" placeholder="FullName" class="form-control form-control-lg"
+            #cardOwnerName="ngModel" [(ngModel)]="service.formData.cardOwnerName" required>
+        </div>
+        <div class="form-froup">
+            <label> Card Number</label>
+            <input name="CradNumber" placeholder="CardNumber" class="form-control form-control-lg"
+            #cradNumber="ngModel" [(ngModel)]="service.formData.cradNumber" required>
+        </div>
+        <div class="form-froup">
+            <label>Crad Exp date</label>
+            <input name="ExpirationDate" placeholder="Exp Date" class="form-control form-control-lg"
+            #expirationDate="ngModel" [(ngModel)]="service.formData.expirationDate" required>
+        </div>
+        <div class="form-froup">
+            <label>Security code</label>
+            <input name="SecurityCode" placeholder="Security Code" class="form-control form-control-lg"
+            #securityCode="ngModel" [(ngModel)]="service.formData.securityCode" required>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMITT</button>
+        </div>
+</form>
